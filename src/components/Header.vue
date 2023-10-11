@@ -1,5 +1,59 @@
-<script setup></script>
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>
 
-<template></template>
+<template>
+    <header>
+        <h2 class="logo">Patroklos</h2>
+        <nav class="menu">
+            <RouterLink class="menu-about" to="/about">About</RouterLink>
+            <p class="menu-cart">
+                <span class="menu-cart-icon fa-solid fa-cart-shopping"></span>
+                <span class="menu-cart-badge">3</span>
+            </p>
+        </nav>
+    </header>
+</template>
 
-<style scoped></style>
+<style scoped>    
+header {
+    background-color: var(--heading);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 200px;
+}
+
+.logo {
+    color: var(--background);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-about {
+    text-decoration: none;
+    color: var(--background);
+}
+
+.menu-cart {
+    color: var(--background);
+}
+
+.menu-cart-badge {
+    height: 12px;
+    width: 12px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 10px;
+    bottom: 10px;
+}
+</style>
