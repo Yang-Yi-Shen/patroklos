@@ -9,57 +9,15 @@ import Footer from "/src/components/Footer.vue";
   <main>
     <h1 class="main-dishes-title heading">Main Dishes</h1>
     <div class="dish-list">
-      <div class="dish-item">
-        <img class="dish-image" src="/gyros.png" />
-        <div class="dish-content">
-          <h2 class="dish-name heading">Dish Name</h2>
-          <p class="dish-description">Very succint and informative description of dish</p>
-          <p class="dish-price heading">$ 6.99</p>
-        </div>
-      </div>
-      <div class="dish-item">
-        <img class="dish-image" src="/moussaka.png" />
-        <div class="dish-content">
-          <h2 class="dish-name heading">Dish Name</h2>
-          <p class="dish-description">Very succint and informative description of dish</p>
-          <p class="dish-price heading">$ 6.99</p>
-        </div>
-      </div>
-      <div class="dish-item">
-        <img class="dish-image" src="/souvlaki.png" />
-        <div class="dish-content">
-          <h2 class="dish-name heading">Dish Name</h2>
-          <p class="dish-description">Very succint and informative description of dish</p>
-          <p class="dish-price heading">$ 6.99</p>
-        </div>
-      </div>
+      <MenuItem image="/gyros.png" name="Lamb Gyros" description="Lamp meat wrapped with thick Greek bread" price="6.99" />
+      <MenuItem image="/moussaka.png" name="Moussaka" description="A Greek version of Italian Lasagna, using lamb meat" price="6.99" />
+      <MenuItem image="/souvlaki.png" name="Souvlaki" description="Roasted meats on a skewer, accompanied by light herbs" price="4.20" />
     </div>
     <h1 class="additional-dishes-title heading">Additional Dishes</h1>
     <div class="dish-list">
-      <div class="dish-item">
-        <img class="dish-image" src="/ouzo.png" />
-        <div class="dish-content">
-          <h2 class="dish-name heading">Dish Name</h2>
-          <p class="dish-description">Very succint and informative description of dish</p>
-          <p class="dish-price heading">$ 6.99</p>
-        </div>
-      </div>
-      <div class="dish-item">
-        <img class="dish-image" src="/kataifi.png" />
-        <div class="dish-content">
-          <h2 class="dish-name heading">Dish Name</h2>
-          <p class="dish-description">Very succint and informative description of dish</p>
-          <p class="dish-price heading">$ 6.99</p>
-        </div>
-      </div>
-      <div class="dish-item">
-        <img class="dish-image" src="/yogurt.png" />
-        <div class="dish-content">
-          <h2 class="dish-name heading">Dish Name</h2>
-          <p class="dish-description">Very succint and informative description of dish</p>
-          <p class="dish-price heading">$ 6.99</p>
-        </div>
-      </div>
+      <MenuItem image="/ouzo.png" name="Ouzo" description="Dense alchoholic beverage made from grapes" price="6.99" />
+      <MenuItem image="/kataifi.png" name="Kataifi" description="A thready, crunchy greek confection" price="4.20" />
+      <MenuItem image="/yogurt.png" name="Greek Yogurt" description="Sour yogurt without artificial seasoning" price="4.20" />
     </div>
   </main>
   <div class="contact">
