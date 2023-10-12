@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
     <header>
-        <h2 class="logo">Patroklos</h2>
+        <img class="logo" src="/logo.png">
         <nav class="menu">
             <RouterLink class="menu-about" to="/about">About</RouterLink>
             <p class="menu-cart">
@@ -25,7 +25,7 @@ header {
 }
 
 .logo {
-    color: var(--background);
+    height: 24px;
 }
 
 nav {
