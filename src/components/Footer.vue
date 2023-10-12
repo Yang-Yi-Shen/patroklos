@@ -1,5 +1,20 @@
 <script setup></script>
 
-<template></template>
+<template>
+    <footer>
+        <p class="footer-text">© Copyright 2023 Yang Yi Shen</p>
+    </footer>
+</template>
 
-<style scoped></style>
+<style scoped>
+footer {
+    background-color: var(--heading);
+    color: var(--background);
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.footer-text {
+    margin: 0px;
+}
+</style>
