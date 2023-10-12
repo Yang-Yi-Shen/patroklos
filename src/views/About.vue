@@ -25,8 +25,9 @@ main {
 }
 
 img {
-    width: 100%;
+    width: calc(100% - 10px);
     height: 400px;
+    border: 5px solid var(--highlight);
     object-fit: cover;
     margin-top: 50px;
 }
