@@ -91,6 +91,7 @@ main {
 .dish-list {
   display: flex;
   gap: 50px;
+  margin-bottom: 50px;
 }
 
 .dish-item {
