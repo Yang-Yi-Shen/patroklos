@@ -66,18 +66,18 @@ import Footer from "/src/components/Footer.vue";
     <h1 class="contact-title heading">Contact Us</h1>
     <p class="contact-subtitle">Check out our social media accounts, or directly call us at 06-969-420</p>
     <div class="contact-list">
-      <div class="contact-item">
+      <a class="contact-item" href="https://www.facebook.com/RickAstley/" target="_blank">
         <span class="contact-icon fa-brands fa-facebook-square"></span>
         <span class="contact-name">Facebook</span>
-      </div>
-      <div class="contact-item">
+      </a>
+      <a class="contact-item" href="https://www.instagram.com/officialrickastley/" target="_blank">
         <span class="contact-icon fa-brands fa-instagram"></span>
         <span class="contact-name">Instagram</span>
-      </div>
-      <div class="contact-item">
+      </a>
+      <a class="contact-item" href="https://twitter.com/rickastley?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
         <span class="contact-icon fa-brands fa-twitter"></span>
         <span class="contact-name">Twitter</span>
-      </div>
+      </a>
     </div>
   </div>
   <Footer />
@@ -145,6 +145,8 @@ main {
 .contact-item {
   display: flex;
   flex-direction: column;
+  color: var(--heading);
+  text-decoration: none;
   transition: color 0.2s;
 }
 
