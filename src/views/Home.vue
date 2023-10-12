@@ -145,6 +145,11 @@ main {
 .contact-item {
   display: flex;
   flex-direction: column;
+  transition: color 0.2s;
+}
+
+.contact-item:hover {
+  color: var(--background);
 }
 
 .contact-icon {
