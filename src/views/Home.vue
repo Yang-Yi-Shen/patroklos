@@ -142,5 +142,10 @@ main {
   .dish-list * {
     flex: 1;
   }
+
+  /* contact */
+  .contact {
+    padding: 50px 10%;
+  }
 }
 </style>
