@@ -27,7 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 200px;
+    padding: 0px min(200px, 15%);
 }
 
 .logo {
@@ -66,5 +66,22 @@ nav {
     background-color: red;
     font-size: 10px;
     bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 0px;
+        gap: 20px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .menu-about, .menu-cart {
+        margin: 0px;
+    }
 }
 </style>
