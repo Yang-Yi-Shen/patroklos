@@ -149,4 +149,10 @@ main {
     padding: 50px 10%;
   }
 }
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px;
+  }
+}
 </style>
