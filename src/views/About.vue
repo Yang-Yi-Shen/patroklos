@@ -21,7 +21,7 @@ import Footer from "/src/components/Footer.vue";
 
 <style scoped>
 main {
-    padding: 0px 300px 50px;
+    padding: 0px min(300px, 20%) 50px;
 }
 
 img {
@@ -30,5 +30,11 @@ img {
     border: 5px solid var(--highlight);
     object-fit: cover;
     margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 0px 10% 10%;
+    }
 }
 </style>
