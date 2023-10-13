@@ -42,6 +42,7 @@ function order() {
 
 <style scoped>
 .dish-item {
+  min-width: 200px;
   background-color: var(--text);
   color: var(--background);
 }
@@ -95,5 +96,16 @@ function order() {
 
 .dish-order-btn:active {
   color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .dish-item {
+    display: flex;
+  }
+  
+  .dish-image {
+    width: 200px;
+    flex-grow: 0;
+  }
 }
 </style>

@@ -56,41 +56,16 @@ function orderItem() {
 
 <style scoped>
 main {
-  padding: 50px 200px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 200px;
 }
 
 .dish-list {
   display: flex;
   gap: 50px;
   margin-bottom: 50px;
-}
-
-.dish-item {
-  background-color: var(--text);
-  color: var(--background);
-}
-
-.dish-item .heading {
-  color: var(--highlight);
-}
-
-.dish-image {
-  width: calc(100% - 10px);
-  object-fit: cover;
-  border: 5px solid var(--highlight);
-  flex: 1;
-}
-
-.dish-content {
-  padding: 20px;
-}
-
-.dish-name {
-  margin: 0px;
-}
-
-.dish-price {
-  margin: 0px;
 }
 
 .order {
@@ -151,5 +126,21 @@ main {
 
 .contact-icon {
   font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 50px;
+  }
+
+  .dish-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .dish-list * {
+    flex: 1;
+  }
 }
 </style>
