@@ -37,7 +37,8 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    font-size: 18px;
 }
 
 .menu-about {
@@ -47,6 +48,10 @@ nav {
 
 .menu-cart {
     color: var(--background);
+}
+
+.menu-about:hover, .menu-cart:hover {
+    color: #bfc3ba;
 }
 
 .menu-cart-badge {
