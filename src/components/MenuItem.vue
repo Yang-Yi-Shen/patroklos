@@ -1,10 +1,14 @@
 <script setup>
+import { ref } from 'vue'
+
 const props = defineProps({
     image: String,
     name: String,
     description: String,
     price: String
 })
+
+const itemCount = ref(0)
 
 function order() {
   const currentOrder = JSON.parse(localStorage.getItem('order'))
@@ -17,6 +21,7 @@ function order() {
     console.log(currentOrder)
     localStorage.setItem('order', JSON.stringify(currentOrder))
   }
+  itemCount.value = currentOrder[props.name]
 }
 </script>
 
@@ -27,7 +32,10 @@ function order() {
       <h2 class="dish-name heading">{{ name }}</h2>
       <p class="dish-description">{{ description }}</p>
       <p class="dish-price heading">$ {{ price }}</p>
-      <button @click="order(), $emit('item-ordered')" type="button" class="dish-btn">Order</button>
+      <div class="dish-btn">
+        <button @click="order(), $emit('item-ordered')" type="button" class="dish-order-btn">Order</button>
+        <button class="dish-count-btn" type="button">{{ itemCount }}</button>
+      </div>
     </div>
   </div>
 </template>
@@ -61,10 +69,9 @@ function order() {
   margin: 0px;
 }
 
-.dish-btn {
+.dish-order-btn, .dish-count-btn {
   border: none;
   background-color: var(--highlight);
-  border-radius: 5px;
   font-size: 16px;
   padding: 5px 15px;
   color: var(--background);
@@ -72,12 +79,21 @@ function order() {
   transition: color 0.2s, background-color 0.2s
 }
 
-.dish-btn:hover {
+.dish-order-btn {
+  border-radius: 5px 0px 0px 5px;
+  border-right: 2px solid var(--heading);
+}
+
+.dish-count-btn {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.dish-order-btn:hover, .dish-count-btn:hover {
   color: var(--highlight);
   background-color: var(--background);
 }
 
-.dish-btn:active {
+.dish-order-btn:active {
   color: var(--text);
 }
 </style>
