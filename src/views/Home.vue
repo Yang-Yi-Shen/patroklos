@@ -5,12 +5,13 @@ import Header from "/src/components/Header.vue";
 import MenuItem from "/src/components/MenuItem.vue";
 import Footer from "/src/components/Footer.vue";
 
-const orderLength = ref(0)
+const orderLength = ref(parseInt(localStorage.getItem('orderLength')) || 0)
 const orderMessage = ref(localStorage.getItem('order') || 'No items selected')
 
 function orderItem() {
   orderMessage.value = localStorage.getItem('order')
   orderLength.value += 1
+  localStorage.setItem('orderLength', orderLength.value)
 }
 </script>
 

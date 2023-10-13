@@ -1,10 +1,12 @@
 <script setup>
 import Header from "/src/components/Header.vue";
 import Footer from "/src/components/Footer.vue";
+
+const orderLength = localStorage.getItem('orderLength')
 </script>
 
 <template>
-    <Header />
+    <Header :orderLength="orderLength" />
     <main>
         <img src="/ouzo.png">
         <h1 class="about-title heading">About Patroklos</h1>
