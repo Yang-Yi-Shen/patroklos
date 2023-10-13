@@ -1,10 +1,23 @@
 <script setup>
-defineProps({
+const props = defineProps({
     image: String,
     name: String,
     description: String,
     price: String
 })
+
+function order() {
+  const currentOrder = JSON.parse(localStorage.getItem('order'))
+  if (currentOrder[props.name]) {
+    currentOrder[props.name] += 1;
+    console.log(currentOrder)
+    localStorage.setItem('order', JSON.stringify(currentOrder))
+  } else {
+    currentOrder[props.name] = 1;
+    console.log(currentOrder)
+    localStorage.setItem('order', JSON.stringify(currentOrder))
+  }
+}
 </script>
 
 <template>
@@ -14,6 +27,7 @@ defineProps({
       <h2 class="dish-name heading">{{ name }}</h2>
       <p class="dish-description">{{ description }}</p>
       <p class="dish-price heading">$ {{ price }}</p>
+      <button @click="order" type="button" class="dish-btn">Order</button>
     </div>
   </div>
 </template>
@@ -45,5 +59,25 @@ defineProps({
 
 .dish-price {
   margin: 0px;
+}
+
+.dish-btn {
+  border: none;
+  background-color: var(--highlight);
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px 15px;
+  color: var(--background);
+  margin-top: 10px;
+  transition: color 0.2s, background-color 0.2s
+}
+
+.dish-btn:hover {
+  color: var(--highlight);
+  background-color: var(--background);
+}
+
+.dish-btn:active {
+  color: var(--text);
 }
 </style>
