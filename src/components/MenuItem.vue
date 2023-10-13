@@ -29,6 +29,10 @@ function order() {
   <div class="dish-item">
     <img class="dish-image" :src="image" />
     <div class="dish-content">
+      <div class="dish-content-top-mobile">
+        <h2 class="dish-name-mobile heading">{{ name }}</h2>
+        <p class="dish-price-mobile heading">$ {{ price }}</p>
+      </div>
       <h2 class="dish-name heading">{{ name }}</h2>
       <p class="dish-description">{{ description }}</p>
       <p class="dish-price heading">$ {{ price }}</p>
@@ -62,12 +66,20 @@ function order() {
   padding: 20px;
 }
 
+.dish-content-top-mobile {
+  display: none;
+}
+
 .dish-name {
   margin: 0px;
 }
 
 .dish-price {
   margin: 0px;
+}
+
+.dish-btn {
+  max-width: 100%;
 }
 
 .dish-order-btn, .dish-count-btn {
@@ -106,6 +118,32 @@ function order() {
   .dish-image {
     width: 200px;
     flex-grow: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .dish-content-top-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dish-name, .dish-price {
+    display: none;
+  }
+
+  .dish-name-mobile, .dish-price-mobile {
+    margin: 0px;
+  }
+
+  .dish-image {
+    width: calc(100% - 10px);
+    height: 20px;
+    flex: 0;
+  }
+  
+  .dish-item {
+    flex-direction: column;
   }
 }
 </style>
