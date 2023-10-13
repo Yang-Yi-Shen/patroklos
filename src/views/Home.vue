@@ -1,23 +1,27 @@
 <script setup>
+import { ref } from 'vue'
+
 import Header from "/src/components/Header.vue";
 import MenuItem from "/src/components/MenuItem.vue";
 import Footer from "/src/components/Footer.vue";
+
+const orderLength = ref(0)
 </script>
 
 <template>
-  <Header />
+  <Header :orderLength="orderLength" />
   <main>
     <h1 class="main-dishes-title heading">Main Dishes</h1>
     <div class="dish-list">
-      <MenuItem image="/gyros.png" name="Lamb Gyros" description="Lamp meat wrapped with thick Greek bread" price="6.99" />
-      <MenuItem image="/moussaka.png" name="Moussaka" description="A Greek version of Italian Lasagna, using lamb meat" price="6.99" />
-      <MenuItem image="/souvlaki.png" name="Souvlaki" description="Roasted meats on a skewer, accompanied by light herbs" price="4.20" />
+      <MenuItem @item-ordered="orderLength += 1" image="/gyros.png" name="Lamb Gyros" description="Lamp meat wrapped with thick Greek bread" price="6.99" />
+      <MenuItem @item-ordered="orderLength += 1" image="/moussaka.png" name="Moussaka" description="A Greek version of Italian Lasagna, using lamb meat" price="6.99" />
+      <MenuItem @item-ordered="orderLength += 1" image="/souvlaki.png" name="Souvlaki" description="Roasted meats on a skewer, accompanied by light herbs" price="4.20" />
     </div>
     <h1 class="additional-dishes-title heading">Additional Dishes</h1>
     <div class="dish-list">
-      <MenuItem image="/ouzo.png" name="Ouzo" description="Dense alchoholic beverage made from grapes" price="6.99" />
-      <MenuItem image="/kataifi.png" name="Kataifi" description="A thready, crunchy greek confection" price="4.20" />
-      <MenuItem image="/yogurt.png" name="Greek Yogurt" description="Sour yogurt without artificial seasoning" price="4.20" />
+      <MenuItem @item-ordered="orderLength += 1" image="/ouzo.png" name="Ouzo" description="Dense alchoholic beverage made from grapes" price="6.99" />
+      <MenuItem @item-ordered="orderLength += 1" image="/kataifi.png" name="Kataifi" description="A thready, crunchy greek confection" price="4.20" />
+      <MenuItem @item-ordered="orderLength += 1" image="/yogurt.png" name="Greek Yogurt" description="Sour yogurt without artificial seasoning" price="4.20" />
     </div>
   </main>
   <div class="contact">

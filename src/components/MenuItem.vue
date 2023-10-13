@@ -27,7 +27,7 @@ function order() {
       <h2 class="dish-name heading">{{ name }}</h2>
       <p class="dish-description">{{ description }}</p>
       <p class="dish-price heading">$ {{ price }}</p>
-      <button @click="order" type="button" class="dish-btn">Order</button>
+      <button @click="order(), $emit('item-ordered')" type="button" class="dish-btn">Order</button>
     </div>
   </div>
 </template>

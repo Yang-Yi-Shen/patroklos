@@ -1,5 +1,9 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+
+defineProps({
+    orderLength: Number
+})
 </script>
 
 <template>
@@ -11,7 +15,7 @@ import { RouterLink } from 'vue-router'
             <RouterLink class="menu-about" to="/about">About</RouterLink>
             <p class="menu-cart">
                 <span class="menu-cart-icon fa-solid fa-cart-shopping"></span>
-                <span class="menu-cart-badge">3</span>
+                <span class="menu-cart-badge">{{ orderLength }}</span>
             </p>
         </nav>
     </header>
