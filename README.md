@@ -2,8 +2,6 @@
 
 The webpage for a fake Greek cuisine restaurant. This was made to showcase my ability to implement a consistent color scheme and branding. In addition to displaying information, the user's order can be sent to a email provided by the visitor, in place of an actual ordering system.
 
-> 🚧 Under development 🚧
-
 ## Color scheme
 - Background: #F5FBEF
 - Body Text: #2D3142
